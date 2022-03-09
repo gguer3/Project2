@@ -1,10 +1,8 @@
 body{
-    vertical-align: middle;
     align-items: center;
     background-color: floralwhite;
 }
 h1{
-    vertical-align: middle;
     text-align: center;
     color: darkseagreen;
 }
@@ -20,8 +18,9 @@ a:hover, a:active {
   background-color: mediumseagreen;
 }
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
