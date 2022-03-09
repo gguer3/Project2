@@ -1,13 +1,12 @@
 body{
-
+    vertical-align: middle;
     align-items: center;
     background-color: floralwhite;
 }
 h1{
-    
+    vertical-align: middle;
     text-align: center;
     color: darkseagreen;
-
 }
 a:link, a:visited {
   background-color: darkseagreen;
