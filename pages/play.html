@@ -6,38 +6,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 2</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
 </head>
-<style>
-  a:link, a:visited {
-    background-color: darkseagreen;
-    color: honeydew;
-    padding: 1px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-  }
-  a:hover, a:active {
-    background-color: mediumseagreen;
-  }
-</style>
+
 <body>
   <h1>B is for Butterfly</h1>
   <p style="position: fixed; bottom: 0; width:100%; text-align: center">
     <a href="letterTree.html">
-      <img src="../imgs/tree.png" alt="tree" width="500" height="350" class="center">
+      <img src="../imgs/tree.png" alt="tree" width="200" height="350" class="center">
     </a>
     <a href="letterTree.html">
-      <img src="../imgs/tree.png" alt="tree" width="500" height="350" class="center">
+      <img src="../imgs/tree.png" alt="tree" width="200" height="350" class="center">
     </a>
     <a href="letterTree.html">
-      <img src="../imgs/tree.png" alt="tree" width="500" height="350" class="center">
+      <img src="../imgs/tree.png" alt="tree" width="200" height="350" class="center">
     </a>
   </p>
-
+ <!--
   <marquee behavior="alternate" scrollamount="15">
-    <img src="../imgs/butterfly.png" width="72" height="79" alt="butterfly">
-  </marquee>
+    <img src="../imgs/butterfly.png" width="150" height="157" alt="butterfly">
+  </marquee>-->
+
+  <p style="position: absolute; top: 0; right: 0; width: 100px; text-align:right;">
+    <a href="letterTree.html">
+      <img src="../imgs/leaf.png" alt="leaf" width="300" height="100" class="center">
+    </a>
+    <a href="letterTree.html">
+      <img src="../imgs/water.png" alt="water" width="300" height="100" class="center">
+    </a>
+  </p>
+  
+
+  <script>
     
+    let x;
+    let y;
+    let dx;
+    let dy;
+
+    function setup() {
+      createCanvas(windowWidth, windowHeight)
+      x = 0;
+      y = 0;
+      dx = 10;
+      dy = 10;
+    }
+
+    let fly;
+
+    function preload() {
+      fly = loadImage("butterfly.png")
+    }
+
+    function draw() {
+      image(fly, x, y)
+      consol.log("fuck this shit")
+
+      if(x + dx > windowWidth || x + dx < 0) {
+          dx = -dx;
+      } 
+      if(y + dy > windowHeight || y + dy < 0) {
+          dy = -dy;
+      }
     
+      x += dx;
+      y += dy;
+    }
+
+  </script>
+
 </body>
+
 </html>
